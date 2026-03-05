@@ -18,9 +18,9 @@ void stack_push(Stack* ps, void* data);
 
 void* stack_pop(Stack* ps);
 
-bool is_empty(Stack s);
+bool is_empty_s(Stack s);
 
-bool is_full(Stack s);
+bool is_full_s(Stack s);
 
 void delete_stack(Stack* ps);
 

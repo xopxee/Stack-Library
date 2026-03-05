@@ -23,7 +23,7 @@ void init_stack(Stack* ps, size_t element_size, int size){
 
 void stack_push(Stack* ps, void* data){
 	
-	if(is_full(*ps)){
+	if(is_full_s(*ps)){
 		perror("Stack Overflow");
 		exit(1);
 	}
@@ -40,7 +40,7 @@ void stack_push(Stack* ps, void* data){
 
 void* stack_pop(Stack* ps){
 	
-	if(is_empty(*ps)){
+	if(is_empty_s(*ps)){
 		return NULL;
 	}
 	
@@ -52,11 +52,11 @@ void* stack_pop(Stack* ps){
 	return ptop;
 }
 
-bool is_empty(Stack s){
+bool is_empty_s(Stack s){
 	return (s.top == -1)? true : false;
 }
 
-bool is_full(Stack s){
+bool is_full_s(Stack s){
 	return (s.top == s.size - 1)? true : false;
 }
 
